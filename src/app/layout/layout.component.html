@@ -1,0 +1,46 @@
+<div class="header d-flex">
+  <div class="nav ">
+    <!-- Logo -->
+    <div class="logo mx-lg-5" routerLink="/" >Aman Tripathi</div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" (click)="toggleNav()">☰</div>
+
+    <!-- Navigation Items -->
+    <div class="nav-items" [class.open]="navOpen">
+      <!-- <div class="nav-item" routerLink="/home" routerLinkActive="active-nav-item" (click)="closeNav()">Home</div> -->
+      <div class="nav-item" routerLink="/about" routerLinkActive="active-nav-item" (click)="closeNav()" [routerLink]="'about'">About</div>
+      <div class="nav-item" routerLink="/projects" routerLinkActive="active-nav-item" (click)="closeNav()">Projects</div>
+      <div class="nav-item" routerLink="/skills" routerLinkActive="active-nav-item" (click)="closeNav()">Skills</div>
+      <div class="nav-item" routerLink="/contact" routerLinkActive="active-nav-item" (click)="closeNav()">Contact</div>
+
+      <!-- Theme Toggle -->
+      <div class="theme-toggle" (click)="toggleDarkMode()">
+        <span class="light-icon">🌞</span>
+        <span class="dark-icon">🌙</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="" style="min-height: 80vh;">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <!-- <div class="footer-container">
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: support&#64;queuecut.com</p>
+      <p>Phone: +1 (800) 555-QUEUE</p>
+    </div>
+  </div> -->
+
+  <div class="footer-bottom">
+    <p class="fs-4">&copy; 2025 Aman Tripathi. All Rights Reserved.</p>
+  </div>
+</footer>

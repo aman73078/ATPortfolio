@@ -1,0 +1,267 @@
+$primary-bg: rgba(255, 255, 255, 0.75);
+$accent: black;
+$text-dark: #1f2937;
+$text-muted: #6b7280;
+$hover-accent: #00a3ff;
+$glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+$glass-border: 1px solid rgba(255, 255, 255, 0.18);
+
+.header {
+  background: $primary-bg;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: $glass-border;
+  box-shadow: $glass-shadow;
+  color: $text-dark;
+  height: 8rem; // was 70px
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem; // was 30px
+    width: 100%;
+
+    .logo {
+      font-weight: 700;
+    font-size: 2.8rem;
+    //   color: $accent;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-shadow: 0 4px 6px rgba(0, 173, 181, 0.3);
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px) scale(1.05);
+        text-shadow: 0 8px 20px rgba(0, 173, 181, 0.5);
+      }
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 3.2rem; // was 28px
+      cursor: pointer;
+      color: $text-dark;
+    }
+
+    .nav-items {
+      display: flex;
+      align-items: center;
+      transition: max-height 0.3s ease;
+
+      .nav-item {
+        margin: 0 2rem; // was 18px
+        font-size: 1.6rem; // was 15px (~1.5rem)
+        color: $text-muted;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover,
+        &.active-nav-item {
+          color: $hover-accent;
+          transform: translateY(-2px);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: $hover-accent;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after,
+        &.active-nav-item::after {
+          width: 100%;
+        }
+      }
+
+      &.open {
+        max-height: 500px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-items {
+        flex-direction: column;
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-top: $glass-border;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+
+        .nav-item {
+          padding: 1.6rem 0; // was 14px
+          font-size: 1.8rem;
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+  }
+}
+
+.theme-toggle {
+  margin-left: 2rem;
+  font-size: 1.6rem; // was 1.2rem
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: $accent;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+
+  &:hover {
+    text-shadow: 0 0 10px $accent;
+  }
+
+  .dark-icon {
+    display: none;
+  }
+
+  body.dark-mode & {
+    color: #f39c12;
+
+    .light-icon {
+      display: none;
+    }
+
+    .dark-icon {
+      display: inline;
+    }
+  }
+}
+
+// ==================== Footer Styles ====================
+$text-muted: #cbd5e0;
+$text-light: #ffffff;
+$primary-bg: black;          // Dark base
+$accent: #fbbf24;              // Amber highlight
+$text-light: #ffffff;
+$text-muted: #cbd5e0;
+$hover-light: #fbbf24;
+.footer {
+  background-color: $primary-bg;
+  color: $text-muted;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footer-section {
+      flex: 1 1 250px;
+      margin: 10px;
+      min-width: 200px;
+
+      h2, h3 {
+        color: $text-light;
+        margin-bottom: 12px;
+      }
+
+      p,
+      li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 6px;
+
+          a {
+            color: $text-muted;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $hover-light;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: lighten($text-muted, 15%);
+    margin-top: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+
+// ################### dark mode ####################
+.theme-toggle {
+  margin-left: auto;
+  font-size: 1.3rem;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #2980b9;
+
+  .dark-icon {
+    display: none;
+  }
+
+  body.dark-mode & {
+    color: #ff6f61;
+
+    .light-icon {
+      display: none;
+    }
+
+    .dark-icon {
+      display: inline;
+    }
+  }
+}
