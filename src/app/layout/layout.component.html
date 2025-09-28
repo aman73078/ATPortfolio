@@ -12,7 +12,7 @@
       <div class="nav-item" routerLink="/home" routerLinkActive="active-nav-item" (click)="closeNav()" [routerLink]="'education'">Education</div>
       <div class="nav-item" routerLink="/projects" routerLinkActive="active-nav-item" (click)="closeNav()">Projects</div>
       <div class="nav-item" routerLink="/skills" routerLinkActive="active-nav-item" (click)="closeNav()">Skills</div>
-      <div class="nav-item" routerLink="/contact" routerLinkActive="active-nav-item" (click)="closeNav()">Contact</div>
+      <div class="nav-item" routerLink="/contact" routerLinkActive="active-nav-item" (click)="closeNav()" [routerLink]="'contact'">Contact</div>
 
       <!-- Theme Toggle -->
       <div class="theme-toggle" (click)="toggleDarkMode()">
@@ -26,7 +26,7 @@
 
 
 
-<div class="" style="min-height: 80vh;">
+<div class="" style="margin-top: 80px;">
   <router-outlet></router-outlet>
 </div>
 
@@ -39,7 +39,7 @@
       <p>Phone: +1 (800) 555-QUEUE</p>
     </div>
   </div> -->
-
+  
   <div class="footer-bottom">
     <p class="fs-4">&copy; 2025 Aman Tripathi. All Rights Reserved.</p>
   </div>
