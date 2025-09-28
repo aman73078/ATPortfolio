@@ -8,16 +8,15 @@
 
     <!-- Navigation Items -->
     <div class="nav-items" [class.open]="navOpen">
-      <div class="nav-item" routerLink="/about" routerLinkActive="active-nav-item" (click)="closeNav()" [routerLink]="'about'">About</div>
-      <div class="nav-item" routerLink="/home" routerLinkActive="active-nav-item" (click)="closeNav()" [routerLink]="'education'">Education</div>
-      <div class="nav-item" routerLink="/projects" routerLinkActive="active-nav-item" (click)="closeNav()">Projects</div>
-      <div class="nav-item" routerLink="/skills" routerLinkActive="active-nav-item" (click)="closeNav()">Skills</div>
-      <div class="nav-item" routerLink="/contact" routerLinkActive="active-nav-item" (click)="closeNav()" [routerLink]="'contact'">Contact</div>
+      <div class="nav-item" routerLink="/about" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}"  (click)="closeNav()" [routerLink]="'about'">About</div>
+      <div class="nav-item" routerLink="/home" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'education'">Education</div>
+      <div class="nav-item" routerLink="/projects" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()">Projects</div>
+      <div class="nav-item" routerLink="/skills" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'skills'">Skills</div>
+      <div class="nav-item" routerLink="/contact" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'contact'">Contact</div>
 
       <!-- Theme Toggle -->
       <div class="theme-toggle" (click)="toggleDarkMode()">
-        <span class="light-icon">🌞</span>
-        <span class="dark-icon">🌙</span>
+        <span class="fs-1">{{isDarkMode ? '🌙': '🌞'}}</span>
       </div>
     </div>
   </div>

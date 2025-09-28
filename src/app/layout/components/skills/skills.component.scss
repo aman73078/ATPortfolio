@@ -1,0 +1,215 @@
+$color-primary: #00adb5;
+$color-text: #f0f4f8;
+$color-background-start: #0f2027;
+$color-background-mid: #203a43;
+$color-background-end: #2c5364;
+$color-gray-dark: #333;
+$color-gray: #dcdada;
+
+
+.background-skills {
+    background: linear-gradient(135deg,
+            $color-background-start,
+            $color-background-mid,
+            $color-background-end);
+    min-height: 100vh;
+    padding: 4rem 0;
+    color: $color-text;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skill-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    color: $color-gray-dark;
+}
+
+.skill-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.skill-header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.skill-header p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: $color-gray;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.skill-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: box-shadow 0.3s ease;
+    color: $color-gray-dark;
+}
+
+.skill-card:hover {
+    box-shadow: 0 0 20px $color-primary;
+}
+
+.skill-icon {
+    font-size: 3.8rem;
+    color: $color-primary;
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-info h2 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    color: $color-primary;
+
+
+    .skill-info p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $color-gray;
+        margin: 0;
+    }
+
+    .cta-section {
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 3rem;
+        margin-bottom: 0.6rem;
+        color: white;
+
+
+        .cta-section p {
+            font-size: 1.5rem;
+            margin-bottom: 1.8rem;
+            color: $color-gray;
+        }
+
+        .btn-gradient-secondary {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 3rem;
+            font-size: 1.6rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-gradient-secondary:hover,
+        .btn-gradient-secondary:focus {
+            background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .skill-wrapper {
+                padding: 3rem 2rem;
+            }
+
+            .skill-header h1 {
+                font-size: 3rem;
+            }
+
+            .skill-header p {
+                font-size: 1.3rem;
+            }
+
+            .skill-info h2 {
+                font-size: 1.6rem;
+            }
+
+            .skill-info p {
+                font-size: 1rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2.4rem;
+            }
+
+            .cta-section p {
+                font-size: 1.2rem;
+            }
+
+            .btn-gradient-secondary {
+                font-size: 1.3rem;
+                padding: 0.8rem 2.5rem;
+            }
+        }
+    }
+}
+
+.cta-section {
+  text-align: center;
+  padding: 2rem 0;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+    color: $color-gray; // Make sure this is defined (like #777)
+    font-weight: 300;
+  }
+
+  .btn-gradient-secondary {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+      outline: none;
+      color: white;
+    }
+  }
+}
+
+// Responsive for smaller screens
+@media (max-width: 768px) {
+  .cta-section {
+    h2 {
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    .btn-gradient-secondary {
+      font-size: 1.3rem;
+      padding: 0.8rem 2.5rem;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { AboutComponent } from './layout/components/about/about.component';
 import { EducationComponent } from './layout/components/education/education.component';
 import { ContactComponent } from './layout/components/contact/contact.component';
+import { SkillsComponent } from './layout/components/skills/skills.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'overview/about', pathMatch:'full'},
@@ -11,6 +12,7 @@ export const routes: Routes = [
             {path:'about', component:AboutComponent},
             {path:'education', component:EducationComponent},
             {path:'contact', component:ContactComponent},
+            {path:'skills', component:SkillsComponent},
         ]
     }
 ];

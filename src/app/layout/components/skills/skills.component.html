@@ -1,0 +1,28 @@
+<div class="background-skills">
+  <section class="skill-wrapper">
+    <div class="skill-header">
+      <h1>My Skills</h1>
+      <p>
+        As a full stack developer, I specialize in a variety of technologies and tools that help build scalable, maintainable web applications.
+      </p>
+    </div>
+
+    <div class="skill-grid">
+      <div class="skill-card" *ngFor="let skill of skills">
+        <div class="skill-icon">
+          <i [ngClass]="getIconClass(skill.icon)" aria-hidden="true"></i>
+        </div>
+        <div class="skill-info">
+          <h2>{{ skill.name }}</h2>
+          <p>{{ skill.desc }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>Interested in working together?</h2>
+      <p>Feel free to reach out through the contact page!</p>
+      <a routerLink="/contact" class="btn btn-gradient-secondary">Contact Me</a>
+    </div>
+  </section>
+</div>
