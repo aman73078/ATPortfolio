@@ -24,6 +24,13 @@ export class ProjectsComponent {
       demoUrl: 'https://taskmanager.demo.com',
       repoUrl: 'https://github.com/yourusername/task-manager',
     },
+    {
+      title: 'Task Manager App',
+      description: 'A productivity app for managing daily tasks with real-time collaboration features.',
+      image: 'images/report-pana.png',
+      demoUrl: 'https://taskmanager.demo.com',
+      repoUrl: 'https://github.com/yourusername/task-manager',
+    },
     // Add more projects as needed
   ];
 }

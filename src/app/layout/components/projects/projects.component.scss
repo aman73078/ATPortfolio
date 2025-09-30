@@ -276,3 +276,130 @@
       box-shadow: 0 0 15px rgba($primary, 0.4);
       border-radius: 2px;
     }
+
+/* 🌐 Default Desktop Layout (≥1025px) */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 projects per row on desktop */
+  gap: 2.5rem;
+}
+
+/* 💻 Tablets (iPad Mini / Air: 601px – 1024px) */
+@media (max-width: 1024px) {
+  .project-wrapper {
+    padding: 0 3rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+
+  .project-header h1 {
+    font-size: 3rem;
+  }
+  .project-header p {
+    font-size: 1.4rem;
+  }
+
+  .project-info h2 {
+    font-size: 1.6rem;
+  }
+  .project-info p {
+    font-size: 1.1rem;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .project-links a.btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.8rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2.6rem;
+  }
+  .cta-section p {
+    font-size: 1.3rem;
+  }
+}
+
+/* 📱 Small Tablets & Large Phones (481px – 600px) */
+@media (max-width: 600px) {
+  .project-wrapper {
+    padding: 0 1.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  .project-header h1 {
+    font-size: 2.4rem;
+  }
+  .project-header p {
+    font-size: 1.2rem;
+  }
+
+  .project-info h2 {
+    font-size: 1.4rem;
+  }
+  .project-info p {
+    font-size: 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .project-links a.btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  .cta-section p {
+    font-size: 1.1rem;
+  }
+  .cta-section .btn-gradient-secondary {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+/* 📱 Very Small Devices (≤400px) */
+@media (max-width: 400px) {
+  .project-wrapper {
+    padding: 0 1rem;
+  }
+
+  .project-header h1 {
+    font-size: 2rem;
+  }
+  .project-header p {
+    font-size: 1rem;
+  }
+
+  .project-info h2 {
+    font-size: 1.2rem;
+  }
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+}
