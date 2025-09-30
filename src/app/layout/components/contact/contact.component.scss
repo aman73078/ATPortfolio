@@ -470,4 +470,77 @@ h2 {
   }
 }
 
+/* ---- Minimal responsive fix: contact-info first on tablets & mobiles ---- */
+
+/* Tablet and smaller: stack the inner flex wrapper vertically and hide divider */
+@media (max-width: 1024px) {
+  /* target the inner flex wrapper inside .about-me-section */
+  .about-me-section > div {
+    flex-direction: column;    /* stack vertically */
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /* hide the vertical divider on stacked layout */
+  .about-me-section > div .vertical-divider {
+    display: none;
+  }
+
+  /* ensure contact info is first and full width */
+  .about-me-section > div .contact-grid {
+    order: 1;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  /* the right-side block (resume/portfolio) becomes second and full width */
+  .about-me-section > div > div:last-child {
+    order: 2;
+    width: 100%;
+    max-width: 900px;
+    text-align: center; /* center the internal buttons/text without changing their style */
+  }
+
+  /* center the buttons inside the right block */
+  .about-me-section > div > div:last-child .btn-group {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile: slightly tighter spacing and full-width buttons if you want them */
+@media (max-width: 768px) {
+  .about-me-section > div {
+    gap: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .about-me-section > div .contact-grid,
+  .about-me-section > div > div:last-child {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* (optional) make call-to-action buttons easier to tap on phones */
+  .about-me-section > div > div:last-child .btn-group button {
+    min-width: 200px;
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+/* Small phones: tighter text sizes (doesn't change your colors or layout otherwise) */
+@media (max-width: 480px) {
+  .about-me-section > div .contact-grid,
+  .about-me-section > div > div:last-child {
+    max-width: 100%;
+  }
+
+  .about-me-section > div > div:last-child .btn-group button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
 
