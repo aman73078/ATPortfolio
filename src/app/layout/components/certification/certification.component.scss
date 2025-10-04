@@ -45,15 +45,15 @@ $shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
         display: flex;
         flex-wrap: wrap;
         gap: 4rem;
-        padding: 3rem 3rem;
+        padding: 4rem 3rem;
         background: linear-gradient(135deg, $primary, #1a1a2e);
         justify-content: center;
 
         .about-me-container {
           flex: 1 1 400px;
-          max-width: 450px;
+          max-width: 500px;
           background: $white;
-          padding: 2rem 2.5rem;
+          padding: 3rem 3.5rem;
           border-radius: 12px;
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
           border: 2px solid transparent;
@@ -70,19 +70,19 @@ $shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
             h3 {
               color: $primary;
               font-weight: 700;
-              font-size: 2rem;
+              font-size: 2.8rem;
               margin-bottom: 1rem;
             }
 
             h2 {
-              font-size: 1.3rem;
+              font-size: 2rem;
               font-weight: 600;
               margin-bottom: 0.5rem;
               color: #111;
             }
 
             h4 {
-              font-size: 1.2rem;
+              font-size: 1.6rem;
               font-weight: 500;
               margin-bottom: 1rem;
               color: #444;
@@ -91,13 +91,13 @@ $shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
             p {
               font-size: 1.6rem;
               line-height: 1.6;
-              margin-bottom: 0.6rem;
+              margin-bottom: 1.6rem;
               color: #555;
             }
 
             .edu-year,
             .edu-status {
-              font-size: 1.2rem;
+              font-size: 1.4rem;
               color: #555;
             }
 
@@ -505,79 +505,46 @@ $shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
   justify-items: center;
 
   .certificate-card {
-    background: #fff;
-    border-radius: 5px;
-    padding: 2.5rem;
+    background: #fffdf5;
+    border: 12px solid #d4af37;
+    border-radius: 20px;
+    padding: 2rem;
     max-width: 420px;
     width: 100%;
     text-align: center;
     position: relative;
-    font-family: "Poppins", sans-serif;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 
-    // 🔹 Common style for L shapes
-    .corner {
+    // Inner decorative border
+    &::before {
+      content: "";
       position: absolute;
-      width: 30px;   // length of L arms
-      height: 30px;
-      border: 3px solid transparent;
-      background: linear-gradient(135deg, #1a1a2e, #00adb5) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, 
-                    linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-    }
-
-    // 🔹 Four corners with 10px inset
-    .corner.tl {
       top: 10px;
       left: 10px;
-      border-right: none;
-      border-bottom: none;
-    }
-
-    .corner.tr {
-      top: 10px;
       right: 10px;
-      border-left: none;
-      border-bottom: none;
-    }
-
-    .corner.bl {
       bottom: 10px;
-      left: 10px;
-      border-right: none;
-      border-top: none;
+      border: 2px dashed #a67c00;
+      border-radius: 14px;
+      pointer-events: none;
     }
 
-    .corner.br {
-      bottom: 10px;
-      right: 10px;
-      border-left: none;
-      border-top: none;
+    .certificate-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #2c2c2c;
+      text-transform: uppercase;
     }
-
-    .main-border{
-      border: 7px double yellow;
-
-      .child-border{
-        border-width: 2px;
-        border-style: dotted;
-        border-color: #007f88;
-        padding-top: 1rem;
-      }
-    }    
 
     h3 {
       font-size: 1.4rem;
-      color: #222;
+      color: #2c3e50;
       margin-bottom: 0.5rem;
     }
 
     h2 {
       font-size: 1.6rem;
-      font-weight: 700;
-      color: #00adb5;
+      color: #b8860b;
       margin: 0.3rem 0;
     }
 
@@ -588,21 +555,20 @@ $shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
       margin-bottom: 1rem;
     }
 
-    img,
-    .edu-icon {
+    img {
       width: 80px;
       height: 80px;
-      margin: 1rem auto;
+      margin: 0.8rem auto;
       border-radius: 50%;
-      border: 3px solid #00adb5;
-      padding: 5px;
+      border: 3px solid #d4af37;
+      padding: 4px;
       background: #fff;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     .edu-year {
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: bold;
       margin-top: 0.5rem;
       color: #333;
     }
@@ -610,96 +576,8 @@ $shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
     .edu-status {
       font-size: 0.95rem;
       font-style: italic;
-      color: #666;
+      color: #777;
     }
   }
 }
 
-
-// Container for layout
-  .about-me-section {
-    margin: 5rem 0rem;
-    display: flex;
-    gap: 4rem;
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, #00adb5, #1a1a2e);
-    font-family: "Poppins", sans-serif;
-    color: #333;
-    flex-wrap: wrap;
-    //   justify-content: center;
-  }
-
-
-.certificates-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  justify-items: center;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr; 
-  }
-
-  .certificate-card {
-    background: #fff;
-    border-radius: 5px;
-    padding: 2.5rem;
-    max-width: 420px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    z-index: 0; // new stacking context
-
-    .corner {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      border: 3px solid transparent;
-      background: linear-gradient(135deg, #1a1a2e, #00adb5) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, 
-                    linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-      z-index: -1; // push corners behind everything
-    }
-
-    .corner.tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
-    .corner.tr { top: 10px; right: 10px; border-left: none; border-bottom: none; }
-    .corner.bl { bottom: 10px; left: 10px; border-right: none; border-top: none; }
-    .corner.br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
-
-    .main-border {
-      border: 7px double yellow;
-
-      .child-border {
-        border-width: 2px;
-        border-style: dotted;
-        border-color: #007f88;
-        padding-top: 1rem;
-        position: relative;
-        z-index: 1; // content always above
-      }
-    }
-  }
-}
-
-
-// Container for layout
-.about-me-section {
-  margin: 5rem 0rem;
-  display: flex;
-  gap: 4rem;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #00adb5, #1a1a2e);
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    gap: 2rem;
-    padding: 1.5rem;
-  }
-}

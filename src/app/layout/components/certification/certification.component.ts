@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
-import { CertificationComponent } from "../certification/certification.component";
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { NgbCarouselModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
-  selector: 'app-education',
-  imports: [ CommonModule, CertificationComponent],
-  templateUrl: './education.component.html',
-  styleUrl: './education.component.scss',
+  selector: 'app-certification',
+  imports: [NgbCarouselModule, CommonModule],
+  templateUrl: './certification.component.html',
+  styleUrl: './certification.component.scss'
 })
-export class EducationComponent {
+export class CertificationComponent {
   certifications = [
     {
       title: 'Google Cloud Certification',
@@ -37,15 +38,14 @@ export class EducationComponent {
 
   visibleCerts: any[] = [];
   currentIndex = 0;
-  @ViewChild(CertificationComponent) certificationComp!: CertificationComponent;
-  constructor() {}
+  @ViewChild('content') content!: TemplateRef<any>;
+  constructor(private ngbModal: NgbModal) {}
   ngOnInit() {
   }
 
   open() {
-    // this.ngbModal.open(this.certificationComp, {
-    //   size: 'lg',
-    // });
-    this.certificationComp.open()
+    this.ngbModal.open(this.content, {
+      size: 'lg',
+    });
   }
 }
