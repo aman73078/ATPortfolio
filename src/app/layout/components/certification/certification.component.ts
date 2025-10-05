@@ -34,6 +34,14 @@ export class CertificationComponent {
       link: 'https://www.coursera.org/account/accomplishments/verify/85WI5U0157OB',
       image: 'certification/Foundation_Data_Analyst.png',
     },
+    {
+      title: 'Excel Mastery Course',
+      org: 'CoursePe',
+      issued: 'April 2024',
+      id: 'SQ21T01',
+      link: 'https://www.coursera.org/account/accomplishments/verify/85WI5U0157OB',
+      image: 'certification/excel.png',
+    },
   ];
 
   visibleCerts: any[] = [];
