@@ -21,12 +21,18 @@ export class SkillsComponent {
     { name: 'Postman', icon: 'postman', desc: 'API testing and development tool' },
   ];
 
-  
+  otherSkills = [
+  { name: 'Python', icon: 'python', desc: 'Versatile programming language for data and backend development' },
+  { name: 'Excel', icon: 'excel', desc: 'Powerful tool for data analysis and visualization' },
+  { name: 'Power BI', icon: 'chart', desc: 'Business analytics tool for interactive reports and dashboards' },
+  { name: 'MongoDB', icon: 'mongodb', desc: 'NoSQL database for scalable and flexible data storage' },
+];
+
 
   getIconClass(icon: string): string {
   const iconMap: { [key: string]: string } = {
     angular: 'fab fa-angular',
-    nestjs: 'fas fa-server', // no official NestJS icon, so server icon
+    nestjs: 'fas fa-server',
     database: 'fas fa-database',
     form: 'fas fa-file-alt',
     code: 'fas fa-code',
@@ -34,8 +40,13 @@ export class SkillsComponent {
     css3: 'fab fa-css3-alt',
     bootstrap: 'fab fa-bootstrap',
     postman: 'fas fa-envelope-open-text',
+    python: 'fab fa-python',
+    excel: 'fas fa-table',
+    chart: 'fas fa-chart-bar',
+    mongodb: 'fas fa-leaf'
   };
   return iconMap[icon] || 'fas fa-tools';
 }
+
 
 }

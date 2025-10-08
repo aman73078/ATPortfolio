@@ -3,7 +3,8 @@
     <div class="skill-header">
       <h1>My Skills</h1>
       <p>
-        As a full stack developer, I specialize in a variety of technologies and tools that help build scalable, maintainable web applications.
+        As a full stack developer, I specialize in a variety of technologies and tools that help build scalable,
+        maintainable web applications.
       </p>
       <div class="section-divider"></div>
     </div>
@@ -19,6 +20,30 @@
         </div>
       </div>
     </div>
+    <!-- other skills section here -->
+
+    <div class="section-divider"></div>
+
+    <div class="skill-header">
+      <h1>Other Skills</h1>
+      <p>
+        In addition to my core development stack, I also work with data analysis, visualization, and scripting tools.
+      </p>
+    </div>
+
+    <div class="skill-grid">
+      <div class="skill-card" *ngFor="let skill of otherSkills">
+        <div class="skill-icon">
+          <i [ngClass]="getIconClass(skill.icon)" aria-hidden="true"></i>
+        </div>
+        <div class="skill-info">
+          <h2>{{ skill.name }}</h2>
+          <p>{{ skill.desc }}</p>
+        </div>
+      </div>
+    </div>
+
+
     <div class="section-divider"></div>
     <div class="cta-section">
       <h2>Interested in working together?</h2>
