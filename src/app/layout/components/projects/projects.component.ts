@@ -21,7 +21,7 @@ export class ProjectsComponent {
     {
       title: 'TimeSync Pro',
       description:
-        'An office time tracker web app to log work hours, monitor productivity, and generate time-based reports. Built with HTML, CSS, and JavaScript.',
+        'A time tracking web app built with Angular and localStorage, designed to log work hours, track productivity, and display user-specific time data.',
       image: 'images/timesyncpro.png', // replace with your actual screenshot path
       demoUrl: 'https://aman73078.github.io/TimeSync-Pro/',
       repoUrl: 'https://github.com/aman73078/TimeSync-Pro', // update if different or remove
