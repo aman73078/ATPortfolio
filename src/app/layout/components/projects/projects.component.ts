@@ -19,6 +19,14 @@ export class ProjectsComponent {
       repoUrl: 'https://github.com/aman73078/Feastio',
     },
     {
+      title: 'TimeSync Pro',
+      description:
+        'An office time tracker web app to log work hours, monitor productivity, and generate time-based reports. Built with HTML, CSS, and JavaScript.',
+      image: 'images/timesyncpro.png', // replace with your actual screenshot path
+      demoUrl: 'https://aman73078.github.io/TimeSync-Pro/',
+      repoUrl: 'https://github.com/aman73078/TimeSync-Pro', // update if different or remove
+    },
+    {
       title: 'QueueCut (Salon App)',
       description:
         'A modern salon booking app with a smooth UI for managing appointments and real-time queue tracking.',
