@@ -17,6 +17,7 @@ export class ProjectsComponent {
       image: 'images/feastio.png',
       demoUrl: 'https://aman73078.github.io/Feastio/overview/home',
       repoUrl: 'https://github.com/aman73078/Feastio',
+      status: 'Done'
     },
     {
       title: 'TimeSync Pro',
@@ -25,6 +26,7 @@ export class ProjectsComponent {
       image: 'images/timesyncpro.png', // replace with your actual screenshot path
       demoUrl: 'https://aman73078.github.io/TimeSync-Pro/',
       repoUrl: 'https://github.com/aman73078/TimeSync-Pro', // update if different or remove
+      status:'Done'
     },
     {
       title: 'QueueCut (Salon App)',
@@ -33,6 +35,7 @@ export class ProjectsComponent {
       image: 'images/queue-cut.png', // replace with your actual image path
       demoUrl: 'https://aman73078.github.io/QueueCut/', // update if different
       repoUrl: 'https://github.com/aman73078/QueueCut',
+      status: 'In Progress'
     },
     {
       title: 'SKY-WORLD',
@@ -41,6 +44,16 @@ export class ProjectsComponent {
       image: 'images/skyworld.png', // replace with your screenshot path
       demoUrl: 'https://aman73078.github.io/SKY-WORLD/',
       repoUrl: 'https://github.com/aman73078/SKY-WORLD', // update if different or remove
+      status: 'Done'
+    },
+    {
+      title: 'GoRoute',
+      description:
+        'A modern, fully responsive travel landing page built with Angular and Tailwind CSS, featuring a clean layout, reusable components, and smooth navigation for an engaging user experience.',
+      image: 'images/goRoute.png', // replace with your screenshot path
+      demoUrl: 'https://aman73078.github.io/GoRoute/',
+      repoUrl: 'https://github.com/aman73078/GoRoute', // update if different or remove
+      status: 'In Progress',
     },
   ];
 }

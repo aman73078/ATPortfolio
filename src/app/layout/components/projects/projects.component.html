@@ -17,7 +17,10 @@
                 <div class="project-card" *ngFor="let project of projects">
                     <img [src]="project.image" [alt]="project.title + ' screenshot'" class="project-image" />
                     <div class="project-info">
-                        <h2>{{ project.title }}</h2>
+                        <div class="d-flex justify-content-between">
+                            <h2>{{ project.title }}</h2>
+                            <span>{{project.status}}</span>
+                        </div>
                         <p>{{ project.description }}</p>
                         <div class="project-links">
                             <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener"

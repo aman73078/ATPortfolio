@@ -1,0 +1,267 @@
+// experiance.component.scss
+// Define variables locally for this component scope
+$primary: #00adb5;
+$white: #fff;
+$light-bg: #f0f4f8;
+$dark-bg: #0f2027;
+$font-main: "Poppins", sans-serif;
+$shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+.experience-page {
+  background: linear-gradient(135deg, $dark-bg, #203a43, #2c5364);
+  color: $light-bg;
+  font-family: $font-main;
+  padding: 4rem 2rem;
+  overflow: hidden;
+
+  .inner-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba($primary, 0.6);
+  }
+
+  .section-subtitle {
+    font-size: 1.6rem;
+    opacity: 0.9;
+    margin-bottom: 5rem;
+    font-weight: 300;
+  }
+
+  .section-divider {
+    width: 80%;
+    height: 2px;
+    margin: 6rem auto;
+    background: linear-gradient(to right, transparent, $primary, transparent);
+    box-shadow: 0 0 15px rgba($primary, 0.4);
+    border-radius: 2px;
+  }
+
+  .exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; // Increased gap for better separation
+    text-align: left;
+    margin-bottom: 5rem;
+  }
+
+  .exp-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    border-left: 5px solid $primary; // Strong Primary color accent
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba($primary, 0.1); // Accentuate shadow on hover
+    }
+  }
+
+  .exp-icon-wrapper {
+    flex-shrink: 0;
+    padding-top: 0.5rem;
+  }
+
+  .exp-icon {
+    font-size: 3rem;
+    color: $primary;
+    background: $white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba($primary, 0.6);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .exp-details {
+    flex-grow: 1;
+
+    .exp-company {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-meta {
+      font-size: 1.1rem;
+      color: $light-bg;
+      opacity: 0.7;
+      margin-bottom: 2rem;
+
+      .status-badge {
+        display: inline-block;
+        margin-left: 15px;
+        padding: 4px 10px;
+        background-color: $primary;
+        color: $dark-bg;
+        font-size: 0.8rem;
+        font-weight: 700;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    // --- Promotion Timeline Styles ---
+    .promotion-history {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem; 
+        padding-left: 1rem;
+        border-left: 2px dotted rgba($primary, 0.4); 
+    }
+
+    .role-entry {
+        padding-left: 1rem;
+        position: relative;
+        
+        /* Timeline marker */
+        &::before {
+            content: "";
+            position: absolute;
+            left: -19px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $primary;
+            box-shadow: 0 0 8px rgba($primary, 0.8);
+        }
+    }
+    
+    .exp-role {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $white;
+      opacity: 0.9;
+      margin-bottom: 0.2rem;
+    }
+    
+    .role-duration {
+        font-size: 1rem;
+        font-style: italic;
+        color: $light-bg;
+        opacity: 0.7;
+        margin-bottom: 1rem;
+    }
+
+    .exp-responsibilities {
+      margin-top: 0.5rem;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 0.5rem;
+          color: $light-bg;
+          opacity: 0.8;
+          position: relative;
+          padding-left: 1.2rem;
+
+          // Custom cyan bullet point
+          &::before {
+            content: "•";
+            color: $primary;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+            line-height: 1.6; // Align with text
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ensure the button style is available
+.btn-gradient-secondary {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.btn-gradient-secondary:hover,
+.btn-gradient-secondary:focus {
+  background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+  color: white;
+  outline: none;
+}
+
+/* ================== Responsive Adjustments ================== */
+@media (max-width: 768px) {
+  .experience-page {
+    padding: 3rem 1rem;
+
+    .section-title {
+      font-size: 3rem;
+    }
+
+    .exp-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+      gap: 1rem;
+      border-left: none; 
+      border-top: 3px solid $primary; // Use top border on mobile
+    }
+
+    .exp-details {
+        .exp-company {
+            font-size: 1.6rem;
+        }
+        .exp-meta {
+            margin-bottom: 1.5rem;
+        }
+
+        .promotion-history {
+            padding-left: 0; // Remove horizontal padding
+            border-left: none; // Remove dotted timeline line
+
+            .role-entry {
+                padding-left: 0;
+                text-align: center;
+                
+                &::before {
+                    content: none; // Remove timeline dots on mobile
+                }
+            }
+        }
+      
+        .exp-responsibilities {
+            text-align: left; // Keep responsibilities left-aligned
+        }
+    }
+  }
+}

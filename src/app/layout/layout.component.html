@@ -1,22 +1,23 @@
-<div class="header d-flex">
-  <div class="nav ">
-    <!-- Logo -->
-    <div class="logo mx-lg-5" routerLink="/" >Aman Tripathi</div>
+<div class="header">
+  <div class="nav">
+    <div class="logo mx-lg-5" routerLink="/">Aman Tripathi</div>
 
-    <!-- Hamburger Menu -->
-    <div class="hamburger" (click)="toggleNav()">☰</div>
+    <div class="hamburger" (click)="toggleNav()">
+      <i class="fas" [class.fa-bars]="!navOpen" [class.fa-times]="navOpen"></i>
+    </div>
 
-    <!-- Navigation Items -->
     <div class="nav-items" [class.open]="navOpen">
-      <div class="nav-item" routerLink="/about" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}"  (click)="closeNav()" [routerLink]="'about'">About</div>
-      <div class="nav-item" routerLink="/home" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'education'">Education</div>
-      <div class="nav-item" routerLink="/projects" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'projects'">Projects</div>
-      <div class="nav-item" routerLink="/skills" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'skills'">Skills</div>
-      <div class="nav-item" routerLink="/contact" [routerLinkActive]="'active-nav-item'" [routerLinkActiveOptions]="{exact:true}" (click)="closeNav()" [routerLink]="'contact'">Contact</div>
+      <div class="nav-item" routerLink="about" routerLinkActive="active-nav-item" (click)="closeNav()">About</div>
+      <div class="nav-item" routerLink="education" routerLinkActive="active-nav-item" (click)="closeNav()">Education</div>
+      <div class="nav-item" routerLink="projects" routerLinkActive="active-nav-item" (click)="closeNav()">Projects</div>
+      <div class="nav-item" routerLink="skills" routerLinkActive="active-nav-item" (click)="closeNav()">Skills</div>
+      <div class="nav-item" routerLink="experience" routerLinkActive="active-nav-item" (click)="closeNav()">Experience</div>
+      <div class="nav-item" routerLink="contact" routerLinkActive="active-nav-item" (click)="closeNav()">Contact</div>
 
-      <!-- Theme Toggle -->
       <div class="theme-toggle" (click)="toggleDarkMode()">
-        <span class="fs-1">{{isDarkMode ? '🌙': '🌞'}}</span>
+        <span class="fs-1">
+            <i class="fas" [class.fa-moon]="!isDarkMode" [class.fa-sun]="isDarkMode"></i>
+        </span>
       </div>
     </div>
   </div>

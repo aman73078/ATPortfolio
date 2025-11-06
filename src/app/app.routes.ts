@@ -5,6 +5,7 @@ import { EducationComponent } from './layout/components/education/education.comp
 import { ContactComponent } from './layout/components/contact/contact.component';
 import { SkillsComponent } from './layout/components/skills/skills.component';
 import { ProjectsComponent } from './layout/components/projects/projects.component';
+import { ExperianceComponent } from './layout/components/experiance/experiance.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'overview/about', pathMatch:'full'},
@@ -15,6 +16,7 @@ export const routes: Routes = [
             {path:'contact', component:ContactComponent},
             {path:'skills', component:SkillsComponent},
             {path:'projects', component:ProjectsComponent},
+            {path:'experience', component:ExperianceComponent},
         ]
     }
 ];

@@ -1,0 +1,47 @@
+<div class="experience-page">
+    <div class="inner-container">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">My career journey and key contributions</p>
+
+        <div class="section-divider"></div>
+
+        <section class="exp-list">
+            <div class="exp-card" *ngFor="let exp of experienceList">
+
+                <div class="exp-icon-wrapper">
+                    <div class="exp-icon"
+                        [style.background-image]="exp.icon.startsWith('images/') ? 'url(' + exp.icon + ')' : 'none'">
+                        <ng-container *ngIf="!exp.icon.startsWith('images/')">{{ exp.icon }}</ng-container>
+                    </div>
+                </div>
+
+                <div class="exp-details">
+                    <div class="exp-header">
+                        <h3 class="exp-company">{{ exp.company }}</h3>
+                        <p class="exp-meta">
+                            <span class="exp-duration">{{ exp.duration }}</span> |
+                            <span class="exp-location">{{ exp.location }}</span>
+                            <span class="status-badge" *ngIf="exp.current">CURRENT</span>
+                        </p>
+                    </div>
+
+                    <div class="promotion-history">
+                        <div class="role-entry" *ngFor="let position of exp.positions">
+                            <h4 class="exp-role">{{ position.title }}</h4>
+                            <p class="role-duration">{{ position.duration }}</p>
+                            <div class="exp-responsibilities">
+                                <ul>
+                                    <li *ngFor="let resp of position.responsibilities">{{ resp }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <a routerLink="/overview/contact" class="btn-gradient-secondary mt-5" href="images/Aman_Tripathi_FullStackDeveloper.pdf" target="_blank">Request Full CV</a>
+    </div>
+</div>
